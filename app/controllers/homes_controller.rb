@@ -6,14 +6,50 @@ class HomesController < ApplicationController
   # GET /homes
   # GET /homes.json
   def index
-    users = User.create(
-        firstName: 'Christopher',
+
+    #location = Location.new(
+        #lat: '3.5464',
+        #lang: '-5.676868'
+    #);
+
+    #location.save();
+
+    #address = Address.new(
+        #city: 'Rochester',
+        #state: 'NY',
+        #zip: '14623'
+   # );
+
+    #address.save();
+
+    #has_many
+    #belongd_to
+
+    users = User.new(
+        firstName: 'Khalil',
         lastName: 'Norman',
-        userName: 'soldiercnorm',
-        email: 'cpn9025@rit.edu'
+        userName: 'wordup',
+        email: 'kpn5679@rit.edu',
     );
 
+    #location.user = users;
+    #address.user = users;
+
+    #location.save();
+    #address.save();
     users.save();
+
+    users.locations.create(
+        lat: '5.7686',
+        lang: '06767'
+    );
+
+    users.addresses.create(
+        city: 'Willingboro',
+        state: 'NJ',
+        zip: '08046'
+    );
+
   end
 
   # GET /homes/1

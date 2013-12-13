@@ -6,6 +6,8 @@ class User
   field :lastName, type: String
   field :userName, type: String
   field :email, type: String
-  #embeds_many :locations, class_name: "location"
-  #embeds_one :address, class_name: "address"
+  #field :createdOn, type: Date
+  #field :updatedOn, type: Date
+  embeds_many :locations, :class_name => "Location"
+  embeds_many :addresses, :class_name => "Address"
 end
