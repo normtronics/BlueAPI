@@ -1,4 +1,16 @@
 BlueAPI2::Application.routes.draw do
+  #resources :homes
+
+  #resources :passwords
+
+  #resources :addresses
+
+  #resources :users
+
+  #resources :locations
+
+  root :to => 'homes#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
